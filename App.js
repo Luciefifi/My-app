@@ -1,20 +1,32 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from "react";
+import {View , Text , ScrollView , Image , TextInput} from "react-native";
+const app = () => {
+  return(
+    <ScrollView>
+      <Text>My first react-native application</Text>
+      <View>
+        <Text> these are some more text</Text>
+        <Image source = {{
+          uri:"/assets/two-girls.jpg",
+         
+        }}
+        style = {{ width: 200  , height: 200}}
+        />
+        <TextInput
+       style = {{
+        style = {{
+          height:  40,
+          borderColor: 'pink';
+          padding: 10,
+          borderWidth: 1;
+        }}
+        defoultValue = "plase type any value in me"
+       }}
+        
+        
+        />
+      </View>
+    </ScrollView>
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
